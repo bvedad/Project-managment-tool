@@ -6,7 +6,7 @@ $(document).ready(function() {
 
   // define routes
   app.route({
-    view: 'view_1',
+    view: 'login',
     // onCreate: function() { $("#view_1").append($.now()+': Written on create<br/>'); },
     // onReady: function() { $("#view_1").append($.now()+': Written when ready<br/>'); }
   });
