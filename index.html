@@ -11,19 +11,31 @@
 
   <body>
 
-    <!-- <nav role="navigation">
+    <nav id="user-navigation" role="navigation">
       <ul>
-        <li><a href="#login">go to view 1</a></li>
-        <li><a href="#view_2">go to view 2</a></li>
-        <li><a href="#view_3">go to view 3</a></li>
+        <li><a href="#user-homework-list">Homework list</a></li>
+        <li><a>Logout</a></li>
       </ul>
-    </nav> -->
+    </nav>
+
+    <nav id="admin-navigation" role="navigation">
+      <ul>
+        <li><a href="#admin-homework-list">Homework list</a></li>
+        <li><a href="#admin-homework-post">Post homework</a></li>
+        <li><a>Logout</a></li>
+      </ul>
+    </nav>
 
     <main id="spapp" role="main">
       <section id="view_2"></section>
       <section id="view_3"><h1>view 3</h1></section>
       <section id="error_404"><h1>Page not found</h1></section>
       <section id="login" data-load="login.html" ></section>
+      <section id="user-homework-list" data-load="user/user-homework-list.html"></section>
+      <section id="user" data-load="user/user.html"></section>
+      <section id="admin-homework-list" data-load="admin/admin-homework-list.html"></section>
+      <section id="admin-homework-post" data-load="admin/admin-homework-post.html"></section>
+      <section id="admin" data-load="admin/admin.html"></section>
     </main>
 
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
