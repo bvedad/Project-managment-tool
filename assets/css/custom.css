@@ -46,6 +46,11 @@ table {
   border-spacing: 0;
 }
 
+.register-row input, button {
+  margin-top: 10px !important;
+  width: 100%;
+}
+
 html { line-height: 1.5; font-family: sans-serif; font-weight: normal; color: rgba(0,0,0,0.87); }
 body { margin:0; }
 

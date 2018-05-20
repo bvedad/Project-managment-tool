@@ -11,31 +11,40 @@
 
   <body>
 
-    <nav id="user-navigation" role="navigation">
+    <nav id="user-navigation" role="navigation" style="display: none;">
       <ul>
-        <li><a href="#user-homework-list">Homework list</a></li>
-        <li><a>Logout</a></li>
+        <li><a href="#student-homework-list">Homework list</a></li>
+        <li><a onclick="logoutUser()">Logout</a></li>
       </ul>
     </nav>
 
-    <nav id="admin-navigation" role="navigation">
+    <nav id="professor-navigation" role="navigation" style="display: none;">
       <ul>
-        <li><a href="#admin-homework-list">Homework list</a></li>
-        <li><a href="#admin-homework-post">Post homework</a></li>
-        <li><a>Logout</a></li>
+        <li><a href="#professor-homework-list">Homework list</a></li>
+        <li><a href="#professor-homework-post">Post homework</a></li>
+        <li><a onclick="logoutProfessor()">Logout</a></li>
+      </ul>
+    </nav>
+
+    <nav id="admin-navigation" role="navigation" style="display: none;">
+      <ul>
+        <li><a href="#add-student">Add student</a></li>
+        <li><a href="#add-professor">Add professor</a></li>
+        <li><a onClick="logoutAdmin()">Logout</a></li>
       </ul>
     </nav>
 
     <main id="spapp" role="main">
-      <section id="view_2"></section>
-      <section id="view_3"><h1>view 3</h1></section>
       <section id="error_404"><h1>Page not found</h1></section>
-      <section id="login" data-load="login.html" ></section>
-      <section id="user-homework-list" data-load="user/user-homework-list.html"></section>
-      <section id="user" data-load="user/user.html"></section>
-      <section id="admin-homework-list" data-load="admin/admin-homework-list.html"></section>
-      <section id="admin-homework-post" data-load="admin/admin-homework-post.html"></section>
-      <section id="admin" data-load="admin/admin.html"></section>
+      <section id="student-login" data-load="login/student-login.html" ></section>
+      <section id="professor-login" data-load="login/professor-login.html" ></section>
+      <section id="admin-login" data-load="login/admin-login.html" ></section>
+      <section id="register" data-load="register.html"></section>
+      <section id="professor-homework-list" data-load="professor/professor-homework-list.html"></section>
+      <section id="professor-homework-post" data-load="professor/professor-homework-post.html"></section>
+      <section id="student-homework-list" data-load="student/student-homework-list.html"></section>
+      <section id="add-student" data-load="admin/add-student.html"></section>
+      <section id="add-professor" data-load="admin/add-professor.html"></section>
     </main>
 
     <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s="
@@ -54,6 +63,29 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
     integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
     crossorigin="anonymous"></script>
+    <script src="/node_modules/jquery.cookie/jquery.cookie.js"></script>
+    <script>
+      
+  function logout() {
+    $.removeCookie('user');
+    $.removeCookie('jwt_token');
+  }
+
+  function logoutUser() {
+    logout();
+    document.location.replace('#student-login');
+  }
+
+  function logoutProfessor() {
+    logout();
+    document.location.replace('#professor-login');
+  }
+
+  function logoutAdmin() {
+    logout();
+    document.location.replace('#admin-login');
+  }
+    </script>
   </body>
 
 </html>
