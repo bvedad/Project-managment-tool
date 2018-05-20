@@ -56,6 +56,13 @@ class PersistanceManager{
     return $this->pdo->query($query)->fetch();
   }
 
-}
+  public function add_homework($homework) {
+    $insertQuery = "INSERT INTO homeworks
+          (title, description, due_date, date_posted, year)
+          VALUES (:title, :description, :due_date, :date_posted, :year)";
+    $statement = $this->pdo->prepare($insertQuery);
+    $statement->execute($homework);
+  }
 
+}
 ?>
