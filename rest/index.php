@@ -151,5 +151,19 @@ Flight::route('POST /login-admin', function() {
     }
 });
 
+//homeworks region
+Flight::route('POST /homeworks', function(){
+    $request = Flight::request();
+
+    $homework = [
+    'title' => $request->data->title,
+    'description' => $request->data->description,
+    'due_date' => $request->data->due_date,
+    'date_posted' => $request->data->date_posted,
+    'year' => $request->data->year
+    ];
+    $stringCode = Flight::pm()->add_homework($homework);
+});
+
 Flight::start();
 ?>
