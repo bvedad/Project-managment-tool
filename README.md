@@ -1,6 +1,6 @@
-Learning managment system (LMS)
+Project management tool
 ===============================
-**LMS** is application that makes it possible for students to see homeworks and school related stuff that are posted on the website by their professor. LMS gives privilages to administrator to add students and professors, and put their informations into the system.
+**Project management tool** software will make it easy for users to manage tasks in fun, flexible, nice ordered way. It will boost organization of users and still be easy to use. User will like it because it will be very user friendly and it will allow user to be more productive.
 
 Technologies used:
 FRONTEND: 
