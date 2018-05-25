@@ -163,6 +163,7 @@ Flight::route('POST /homeworks', function(){
     'year' => $request->data->year
     ];
     $stringCode = Flight::pm()->add_homework($homework);
+    Flight::redirect('../#professor-homework-post');
 });
 
 Flight::start();

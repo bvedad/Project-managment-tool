@@ -1,18 +1,16 @@
 <h1>Professor homework post</h1>
 <div class="container">
-    <div class="row">
-        <p class="col-md-1">Title</p>
-        <input id="input-title" class="col-md-11" rows="4" type="text"/>
-    </div>
-    <div class="row" style="margin-top: 10px">
-        <p class="col-md-1">Description</p>
-        <textarea id="input-homework" class="col-md-11" rows="4" />
-    </div>
-    <div class="row" style="margin-top: 10px">
-            <p class="col-md-1">Year</p>
-            <input  class="col-md-1" id="input-year" type="number" />
-        <button id="button-submit" class="btn btn-danger pull-right" style="width: 100px; margin-top: 15px;">Submit</button>
-    </div>
+    <form id="form-homework"  method="POST" action="rest/homeworks" class="align-labels-right">
+        <label for="title">Title</label>
+        <input id="input-title" label="title" required name="title" type="text" />
+        <label for="description" style="margin-top: 10px;">Description</label>
+        <textarea id="input-description" name="description" required  rows="4"/>
+        <div style="margin-top: 10px">
+            <label for="year" >Year</label>
+            <input id="input-year" required name="year" type="number" style="width: 100px;"/>
+            <button type="submit" id="button-submit" class="btn btn-danger" style="width: 100px; margin-top: 15px;">Submit</button>
+        </div>
+    </form>
 </div>
 
 <script src="assets/js/professor/professor-homework-post.js"></script>
