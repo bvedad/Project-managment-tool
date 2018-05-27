@@ -1,0 +1,36 @@
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<div class="container">
+    <h1>Post task</h1>
+    <div class="row">
+        <p class="col-md-1">Title</p>
+        <input id="input-title" class="col-md-10"/>
+    </div>
+    <div class="row" style="margin-top: 15px;">
+        <p class="col-md-1">Body</p>
+        <textarea id="input-body" class="col-md-10" rows="4"  style="min-height: 100px;"/>
+    </div>
+    <div class="row" style="margin-top: 15px;">
+        <p class="col-md-1">Domain</p>
+        <select id="domain-menu">
+            <option>Select Domain</option>
+        </select>
+    </div>
+    <div class="row" style="margin-top: 15px;">
+        <p class="col-md-1">Subject</p>
+        <select id="subject-menu">
+            <option>Select Subject</option>
+        </select>
+    </div>
+    <div class="row" style="margin-top: 15px;">
+        <p class="col-md-1">Priority mode</p>
+        <select id="priority-mode-menu">
+            <option>Select Priority mode</option>
+        </select>
+    </div>
+    <div class="row" style="margin-top: 15px;">
+        <p class="col-md-1">Final date</p>
+        <input type="date" id="input-final-date"></input>
+    </div>
+    <button id="button-submit" class="col-md-1 col-md-offset-10 btn btn-danger" style="margin-top: 15px;">Submit</button>
+    <script src="assets/js/tasks/task-post.js"></script>
+</div>
