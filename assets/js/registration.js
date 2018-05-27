@@ -1,25 +1,29 @@
 $("#register-button").click(function() {
     var name = document.getElementById('name-input').value;
     var surname = document.getElementById('surname-input').value;
+    //todo bvedad implement this
+    var username = document.getElementById('username-input').value;
     var email = document.getElementById('email-input').value;
-    var year = document.getElementById('year-input').value;
     var password = document.getElementById('password-input').value;
     var passwordConfirm = document.getElementById('password-confirm-input').value;
-    if(!areInputsValid(email, name, surname, year,
+    if(!areInputsValid(email, name, surname, username,
     password, passwordConfirm)) {
         return;
     }
-    $.post("rest/students", {
-        'name': name,
-        'surname': surname,
-        'email': email,
-        'year': year,
-        'password': password
+    $.post("rest/users", {
+        'data': {
+            'name': name,
+            'surname': surname,
+            'username': username,
+            'email': email,
+            'password': password
+        },
+        'headers': 'vedad'
     },
     function(data, status){
-        debugger
         if(status == 'success') {
             alert('Account created');
+            document.location.replace('#login');
         } else {
             alert('Account not created');
         }
@@ -31,7 +35,7 @@ function validateEmail(email) {
     return re.test(String(email).toLowerCase());
 }
 
-function areInputsValid(email, name, surname, year, password, passwordConfirm) {
+function areInputsValid(email, name, surname, username, password, passwordConfirm) {
     if(name === '') {
         alert('Please enter name');
         return false;
@@ -44,8 +48,8 @@ function areInputsValid(email, name, surname, year, password, passwordConfirm) {
         alert('Please enter valid email');
         return false;
     }
-    if(year === '') {
-        alert('Please enter year');
+    if(username === '') {
+        alert('Please enter username');
         return false;
     }
     if(password === '') {
