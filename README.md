@@ -2,10 +2,6 @@
 
 Software that will make it easy for users to manage tasks in fun, flexible, nice ordered way. It will boost organization of users and still be easy to use. User will like it because it will be very user friendly and it will allow user to be more productive.
 
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
 ## Built With
 
 * [Antonio Miletti SPAPP](https://github.com/amiletti/spapp)
